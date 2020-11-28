@@ -50,17 +50,28 @@ def rotate_bird(bird, index):
     return new_bird
 
 
+def score_display():
+    score_surface = game_font.render(str(score), True, (255, 255, 255))
+    score_rect = score_surface.get_rect(center=(288, 100))
+    screen.blit(score_surface, score_rect)
+
+    high_score_surface = game_font.render(f"High Score: {str(high_score)}", True, (255, 255, 255))
+    high_score_rect = high_score_surface.get_rect(center=(288, 850))
+    screen.blit(high_score_surface, high_score_rect)
+
 # pygame.mixer.pre_init(frequency=44100, size=16, channels=2, buffer=1024)
 pygame.init()
 screen = pygame.display.set_mode((576, 1024))
 clock = pygame.time.Clock()
+game_font = pygame.font.Font("assets/04B_19.ttf", 40)
 
 # Game Variables
 gravity = 0.25
 game_active = True
 score = 0
+high_score = 0
 velocity = 5
-number_of_birds = 20
+number_of_birds = 30
 bird_movement = [0 for _ in range(number_of_birds)]
 
 crossover_probability = 0.9
@@ -77,17 +88,19 @@ floor_x = 0
 
 bird_surface = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midflap.png").convert_alpha())
 
+bird_cromoshomes = Chromosome.generate_new_random_population(number_of_birds)
+FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
+fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
 
 for current_generation in range(MAX_GENERATII):
+    score = 0
     print("CURRENT GENERATION: {}".format(current_generation))
     bird_rects = [bird_surface.get_rect(center=(100, 512)) for _ in range(number_of_birds)]
     active_birds = [True] * number_of_birds
-    FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
-    fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
 
     # pygame.time.set_timer(FLY, 850)
 
-    #bird_cromoshomes = [Chromosome(NeuralBird()) for _ in range(number_of_birds)]
+    # bird_cromoshomes = [Chromosome(NeuralBird()) for _ in range(number_of_birds)]
     bird_cromoshomes = Chromosome.read_from_file("training.json", population_size=number_of_birds)
 
     bird_cromoshomes = one_generation_evolution(bird_cromoshomes,
@@ -130,7 +143,7 @@ for current_generation in range(MAX_GENERATII):
                     screen.blit(rotated_bird[index], bird_rects[index])
                     # te uiti la coliziuni
                     if check_collision(pipe_list, bird_rects[index]):
-                        #active_birds[index] = False
+                        active_birds[index] = False
 
                         bird_cromoshomes[index].complete_training(score)
 
@@ -140,9 +153,9 @@ for current_generation in range(MAX_GENERATII):
 
                 # dai update la neuronii de input
                 for i in range(0, len(pipe_list), 2):
-                    distance = pipe_list[i].centerx - bird_rects[index].centerx
-                    pipe_down = pipe_list[0].midtop[1] - bird_rects[index].centery
-                    pipe_up = pipe_list[0].midbottom[1] - bird_rects[index].centery
+                    distance = pipe_list[i].bottomleft[0] - bird_rects[index].bottomright[0]
+                    pipe_down = pipe_list[0].topright[1] - bird_rects[index].bottomleft[1]
+                    pipe_up = pipe_list[0].bottomright[1] - bird_rects[index].topleft[1]
                     if distance > 0:
                         break
 
@@ -156,13 +169,15 @@ for current_generation in range(MAX_GENERATII):
                     pygame.event.post(fly_events[index])
 
             # cand mor toti faci gameActive = false
-            game_active = not all([check_collision(pipe_list, bird_rects[i]) for i in range(number_of_birds) if active_birds[i]])
+            game_active = not all(
+                [check_collision(pipe_list, bird_rects[i]) for i in range(number_of_birds) if active_birds[i]])
 
             # Pipes
             pipe_list = move_pipes(pipe_list)
             draw_pipes(pipe_list)
 
             score += 0.01
+            score_display()
         else:
             # alg genetic
 
@@ -171,6 +186,8 @@ for current_generation in range(MAX_GENERATII):
             # resetare populatie
             game_active = True
             write_to_json_file([bird_cromoshomes[i].to_dict() for i in range(number_of_birds)])
+            if score > high_score:
+                high_score = score
             print("game over")
             break
             pygame.quit()
