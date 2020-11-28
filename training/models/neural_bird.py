@@ -1,8 +1,4 @@
-import random
-
-
-def generate_random_range(min_range=-1, max_range=1):
-    return random.random() * (max_range - min_range) + min_range
+from utils import generate_random_range
 
 
 class NeuralBird:

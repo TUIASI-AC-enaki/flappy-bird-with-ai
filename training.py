@@ -1,8 +1,9 @@
 import pygame, sys
 import random
 
-from training.cromozom import Chromosome
-from training.neural_bird import NeuralBird
+from training.evolutionary_algorithm import one_generation_evolution
+from training.models.chromosome import Chromosome
+from training.models.neural_bird import NeuralBird
 from utils import write_to_json_file
 
 
@@ -59,8 +60,13 @@ gravity = 0.25
 game_active = True
 score = 0
 velocity = 5
-number_of_birds = 1
+number_of_birds = 20
 bird_movement = [0 for _ in range(number_of_birds)]
+
+crossover_probability = 0.9
+mutation_probability = 0.2
+percentage_for_parenting = 0.5
+MAX_GENERATII = 100
 
 background_sf = pygame.image.load("assets/background-day.png").convert()
 background_sf = pygame.transform.scale2x(background_sf)
@@ -70,96 +76,110 @@ floor_sf = pygame.transform.scale2x(floor_sf)
 floor_x = 0
 
 bird_surface = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midflap.png").convert_alpha())
-bird_rects = [bird_surface.get_rect(center=(100, 512)) for _ in range(number_of_birds)]
-active_birds = [True] * number_of_birds
-FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
-fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
 
-# pygame.time.set_timer(FLY, 850)
-bird_cromoshomes = [Chromosome(NeuralBird()) for _ in range(number_of_birds)]
 
-pipe_surface = pygame.image.load("assets/pipe-green.png").convert()
-pipe_surface = pygame.transform.scale2x(pipe_surface)
-pipe_list = []
-SPAWNPIPE = pygame.USEREVENT
-pygame.time.set_timer(SPAWNPIPE, 1200)
-pipe_height = [400, 600, 800]
+for current_generation in range(MAX_GENERATII):
+    print("CURRENT GENERATION: {}".format(current_generation))
+    bird_rects = [bird_surface.get_rect(center=(100, 512)) for _ in range(number_of_birds)]
+    active_birds = [True] * number_of_birds
+    FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
+    fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
 
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+    # pygame.time.set_timer(FLY, 850)
+
+    #bird_cromoshomes = [Chromosome(NeuralBird()) for _ in range(number_of_birds)]
+    bird_cromoshomes = Chromosome.read_from_file("training.json", population_size=number_of_birds)
+
+    bird_cromoshomes = one_generation_evolution(bird_cromoshomes,
+                                                crossover_probability=crossover_probability,
+                                                mutation_probability=mutation_probability,
+                                                finale_population_size=number_of_birds,
+                                                percentage_for_parenting=percentage_for_parenting)
+
+    pipe_surface = pygame.image.load("assets/pipe-green.png").convert()
+    pipe_surface = pygame.transform.scale2x(pipe_surface)
+    pipe_list = []
+    SPAWNPIPE = pygame.USEREVENT
+    pygame.time.set_timer(SPAWNPIPE, 1200)
+    pipe_height = [400, 600, 800]
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+            if event.type == SPAWNPIPE:
+                pipe_list.extend(create_pipe())
+                if len(pipe_list) > 4:
+                    del pipe_list[0]
+                    del pipe_list[0]
+            if event.type in FLY:
+                ind = event.type - FLY[0]
+                bird_movement[ind] = 0
+                bird_movement[ind] -= 12
+        screen.blit(background_sf, (0, 0))
+
+        if game_active:
+            # Bird
+            bird_movement = list(map(lambda x: x + gravity, bird_movement))
+            rotated_bird = [rotate_bird(bird_surface, i) for i in range(number_of_birds)]
+            for index in range(number_of_birds):
+                if active_birds[index]:
+                    bird_rects[index].centery += bird_movement[index]
+                    screen.blit(rotated_bird[index], bird_rects[index])
+                    # te uiti la coliziuni
+                    if check_collision(pipe_list, bird_rects[index]):
+                        #active_birds[index] = False
+
+                        bird_cromoshomes[index].complete_training(score)
+
+                distance = 10000
+                pipe_up = 10000
+                pipe_down = 10000
+
+                # dai update la neuronii de input
+                for i in range(0, len(pipe_list), 2):
+                    distance = pipe_list[i].centerx - bird_rects[index].centerx
+                    pipe_down = pipe_list[0].midtop[1] - bird_rects[index].centery
+                    pipe_up = pipe_list[0].midbottom[1] - bird_rects[index].centery
+                    if distance > 0:
+                        break
+
+                bird_cromoshomes[index].bird.update_inputs(distance=distance, bird_height=bird_rects[index].centery,
+                                                           pipe_bottom_height=pipe_down, pipe_top_height=pipe_up,
+                                                           velocity=velocity)
+
+                # dai compute la noua valoare. Daca e True generezi event
+                # print("Bird {}: {}".format(index, bird_cromoshomes[index].bird.compute_output()))
+                if bird_cromoshomes[index].bird.compute_output():
+                    pygame.event.post(fly_events[index])
+
+            # cand mor toti faci gameActive = false
+            game_active = not all([check_collision(pipe_list, bird_rects[i]) for i in range(number_of_birds) if active_birds[i]])
+
+            # Pipes
+            pipe_list = move_pipes(pipe_list)
+            draw_pipes(pipe_list)
+
+            score += 0.01
+        else:
+            # alg genetic
+
+            # salvare parametrii cel mai bun fitness
+
+            # resetare populatie
+            game_active = True
+            write_to_json_file([bird_cromoshomes[i].to_dict() for i in range(number_of_birds)])
+            print("game over")
+            break
             pygame.quit()
             sys.exit()
+        # Floor
+        floor_x -= 1
+        draw_floor()
+        if floor_x <= -576:
+            floor_x = 0
 
-        if event.type == SPAWNPIPE:
-            pipe_list.extend(create_pipe())
-            if len(pipe_list) > 4:
-                del pipe_list[0]
-                del pipe_list[0]
-        if event.type in FLY:
-            ind = event.type - FLY[0]
-            bird_movement[ind] = 0
-            bird_movement[ind] -= 12
-    screen.blit(background_sf, (0, 0))
-
-    if game_active:
-        # Bird
-        bird_movement = list(map(lambda x: x + gravity, bird_movement))
-        rotated_bird = [rotate_bird(bird_surface, i) for i in range(number_of_birds)]
-        for index in range(number_of_birds):
-            if active_birds[index]:
-                bird_rects[index].centery += bird_movement[index]
-                screen.blit(rotated_bird[index], bird_rects[index])
-                # te uiti la coliziuni
-                if check_collision(pipe_list, bird_rects[index]):
-                    active_birds[index] = False
-                    bird_cromoshomes[index].fitness = score
-
-
-        if len(pipe_list) > 0:
-            print(pipe_list[1].midbottom[1])
-        distance = 10000
-        pipe_up = 10000
-        pipe_down = 10000
-
-        # dai update la neuronii de input
-        for i in range(0, len(pipe_list), 2):
-            distance = pipe_list[i].centerx - bird_rect.centerx
-            pipe_down = pipe_list[0].midtop[1] - bird_rect.centery
-            pipe_up = pipe_list[0].midbottom[1] - bird_rect.centery
-            if distance > 0:
-                break
-
-        bird_cromoshome.bird.update_inputs(distance=distance, bird_height=bird_rect.centery,
-                                           pipe_bottom_height=pipe_down, pipe_top_height=pipe_up, velocity=velocity)
-
-        # dai compute la noua valoare. Daca e True generezi event
-        print(bird_cromoshome.bird.compute_output())
-        if bird_cromoshome.bird.compute_output():
-            pygame.event.post(fly_event)
-
-        # cand mor toti faci gameActive = false
-        game_active = check_collision(pipe_list, bird_rect)
-
-        # Pipes
-        pipe_list = move_pipes(pipe_list)
-        draw_pipes(pipe_list)
-
-        score += 0.01
-    else:
-        # alg genetic
-
-        # salvare parametrii cel mai bun fitness
-
-        # resetare populatie
-        # game_active = True
-        write_to_json_file([bird_cromoshomes[i].to_dict() for i in range(number_of_birds)])
-        print("game over")
-    # Floor
-    floor_x -= 1
-    draw_floor()
-    if floor_x <= -576:
-        floor_x = 0
-
-    pygame.display.update()
-    clock.tick(120)
+        pygame.display.update()
+        clock.tick(120)
