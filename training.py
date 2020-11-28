@@ -76,7 +76,7 @@ number_of_birds = 100
 bird_movement = [0 for _ in range(number_of_birds)]
 
 crossover_probability = 0.9
-mutation_probability = 0.5
+mutation_probability = 0.2
 percentage_for_parenting = 0.5
 MAX_GENERATII = 200000
 
@@ -125,7 +125,7 @@ for current_generation in range(MAX_GENERATII):
 
             if event.type == SPAWNPIPE:
                 pipe_list.extend(create_pipe())
-                if len(pipe_list) > 4:
+                if len(pipe_list) > 8:
                     del pipe_list[0]
                     del pipe_list[0]
             if event.type in FLY:
@@ -155,8 +155,8 @@ for current_generation in range(MAX_GENERATII):
                 # dai update la neuronii de input
                 for i in range(0, len(pipe_list), 2):
                     distance = pipe_list[i].bottomleft[0] - bird_rects[index].bottomright[0]
-                    pipe_down = pipe_list[0].topright[1] - bird_rects[index].bottomleft[1]
-                    pipe_up = pipe_list[0].bottomright[1] - bird_rects[index].topleft[1]
+                    pipe_down = pipe_list[i].topright[1] - bird_rects[index].bottomleft[1]
+                    pipe_up = pipe_list[i+1].bottomright[1] - bird_rects[index].topleft[1]
                     if distance > 0:
                         break
 
