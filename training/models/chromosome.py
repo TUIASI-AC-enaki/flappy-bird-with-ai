@@ -68,7 +68,8 @@ class Chromosome:
         if len(population) < population_size:
             for _ in range(population_size - len(population)):
                 population.append(Chromosome(NeuralBird()))
-
+        if len(population)>population_size:
+            population=population[:population_size]
         return population
 
     @staticmethod

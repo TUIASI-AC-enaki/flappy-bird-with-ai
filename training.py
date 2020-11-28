@@ -76,9 +76,9 @@ number_of_birds = 100
 bird_movement = [0 for _ in range(number_of_birds)]
 
 crossover_probability = 0.9
-mutation_probability = 0.2
+mutation_probability = 0.5
 percentage_for_parenting = 0.5
-MAX_GENERATII = 100
+MAX_GENERATII = 200000
 
 background_sf = pygame.image.load("assets/background-day.png").convert()
 background_sf = pygame.transform.scale2x(background_sf)
@@ -89,7 +89,6 @@ floor_x = 0
 
 bird_surface = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midflap.png").convert_alpha())
 
-bird_cromoshomes = Chromosome.generate_new_random_population(number_of_birds)
 FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
 fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
 SPAWNPIPE = pygame.USEREVENT
