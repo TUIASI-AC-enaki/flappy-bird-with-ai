@@ -21,7 +21,7 @@ def create_pipe():
 
 def move_pipes(pipes):
     for pipe in pipes:
-        pipe.centerx -= velocity
+        pipe.centerx -= velocity*dt
     return pipes
 
 
@@ -67,18 +67,24 @@ clock = pygame.time.Clock()
 game_font = pygame.font.Font("assets/04B_19.ttf", 40)
 
 # Game Variables
-gravity = 0.25
+scale_factor=70
+gravity = 0.35*scale_factor
+up_velocity=12
+
 game_active = True
 score = 0
 high_score = 0
-velocity = 5
-number_of_birds = 100
+velocity = 375
+number_of_birds = 200
 bird_movement = [0 for _ in range(number_of_birds)]
 
 crossover_probability = 0.9
 mutation_probability = 0.2
 percentage_for_parenting = 0.5
 MAX_GENERATII = 200000
+get_ticks_last_frame=0
+dt=0.01
+
 
 background_sf = pygame.image.load("assets/background-day.png").convert()
 background_sf = pygame.transform.scale2x(background_sf)
@@ -131,12 +137,12 @@ for current_generation in range(MAX_GENERATII):
             if event.type in FLY:
                 ind = event.type - FLY[0]
                 bird_movement[ind] = 0
-                bird_movement[ind] -= 12
+                bird_movement[ind] -= up_velocity
         screen.blit(background_sf, (0, 0))
 
         if game_active:
             # Bird
-            bird_movement = list(map(lambda x: x + gravity, bird_movement))
+            bird_movement = list(map(lambda x: x + gravity*dt, bird_movement))
             rotated_bird = [rotate_bird(bird_surface, i) for i in range(number_of_birds)]
             for index in range(number_of_birds):
                 if active_birds[index]:
@@ -199,4 +205,6 @@ for current_generation in range(MAX_GENERATII):
             floor_x = 0
 
         pygame.display.update()
-        clock.tick(120)
+        t=pygame.time.get_ticks()
+        dt=(t-get_ticks_last_frame)/1000
+        get_ticks_last_frame=t
