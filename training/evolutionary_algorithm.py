@@ -17,7 +17,9 @@ def crossover(population: list, crossover_probability=0.9):
                 #print("Father: {}".format(father.to_str()))
                 #print("Child: {}".format(child.to_str()))
                 children.append(child)
-    print("Generated new {} children".format(len(children)))
+                if len(children) >= len(population):
+                    return children
+    # print("Generated new {} children".format(len(children)))
     return children
 
 

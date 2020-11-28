@@ -59,6 +59,7 @@ def score_display():
     high_score_rect = high_score_surface.get_rect(center=(288, 850))
     screen.blit(high_score_surface, high_score_rect)
 
+
 # pygame.mixer.pre_init(frequency=44100, size=16, channels=2, buffer=1024)
 pygame.init()
 screen = pygame.display.set_mode((576, 1024))
@@ -71,7 +72,7 @@ game_active = True
 score = 0
 high_score = 0
 velocity = 5
-number_of_birds = 30
+number_of_birds = 100
 bird_movement = [0 for _ in range(number_of_birds)]
 
 crossover_probability = 0.9
@@ -91,6 +92,8 @@ bird_surface = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midfl
 bird_cromoshomes = Chromosome.generate_new_random_population(number_of_birds)
 FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
 fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
+SPAWNPIPE = pygame.USEREVENT
+pygame.time.set_timer(SPAWNPIPE, 1200)
 
 for current_generation in range(MAX_GENERATII):
     score = 0
@@ -112,8 +115,7 @@ for current_generation in range(MAX_GENERATII):
     pipe_surface = pygame.image.load("assets/pipe-green.png").convert()
     pipe_surface = pygame.transform.scale2x(pipe_surface)
     pipe_list = []
-    SPAWNPIPE = pygame.USEREVENT
-    pygame.time.set_timer(SPAWNPIPE, 1200)
+
     pipe_height = [400, 600, 800]
 
     while True:
@@ -169,8 +171,7 @@ for current_generation in range(MAX_GENERATII):
                     pygame.event.post(fly_events[index])
 
             # cand mor toti faci gameActive = false
-            game_active = not all(
-                [check_collision(pipe_list, bird_rects[i]) for i in range(number_of_birds) if active_birds[i]])
+            game_active = any(active_birds)
 
             # Pipes
             pipe_list = move_pipes(pipe_list)
