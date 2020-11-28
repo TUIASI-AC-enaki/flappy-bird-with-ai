@@ -1,3 +1,5 @@
+import random
+
 from training.models.chromosome import Chromosome
 from training.models.neural_bird import NeuralBird
 
@@ -9,17 +11,19 @@ def select_parents(population: list, population_percent=0.5):
 
 def crossover(population: list, crossover_probability=0.9):
     children = []
-    for mother in population:
-        for father in population:
-            child = Chromosome.reproduce(mother, father, crossover_probability)
+    new_population=population.copy()
+    random.shuffle(new_population)
+    for pair in list(zip(population,new_population)):
+            child = Chromosome.reproduce(pair[0], pair[1], crossover_probability)
             if child is not None:
                 #print("\nMother: {}".format(mother.to_str()))
                 #print("Father: {}".format(father.to_str()))
                 #print("Child: {}".format(child.to_str()))
                 children.append(child)
                 if len(children) >= len(population):
+                    #print("Generated new {} children".format(len(children)))
                     return children
-    # print("Generated new {} children".format(len(children)))
+
     return children
 
 

@@ -75,11 +75,11 @@ game_active = True
 score = 0
 high_score = 0
 velocity = 375
-number_of_birds = 200
+number_of_birds = 150
 bird_movement = [0 for _ in range(number_of_birds)]
 
-crossover_probability = 0.9
-mutation_probability = 0.2
+crossover_probability = 1.0
+mutation_probability = 0.05
 percentage_for_parenting = 0.5
 MAX_GENERATII = 200000
 get_ticks_last_frame=0
