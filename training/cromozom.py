@@ -29,7 +29,7 @@ def crossover(population: list, crossover_probability=0.9):
 
 
 class Chromosome:
-    def __init__(self, bird):
+    def __init__(self, bird: NeuralBird):
         self.bird = bird
         self.fitness = 0
 
@@ -50,6 +50,12 @@ class Chromosome:
 
     def fitness(self):
         return self.fitness
+
+    def to_dict(self):
+        return {
+            "score": self.fitness,
+            "weights": self.bird.get_list_weights()
+        }
 
     def to_str(self):
         return str(self.bird.weights)

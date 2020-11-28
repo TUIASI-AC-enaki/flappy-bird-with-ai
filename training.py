@@ -3,6 +3,7 @@ import random
 
 from training.cromozom import Chromosome
 from training.neural_bird import NeuralBird
+from utils import write_to_json_file
 
 
 def draw_floor():
@@ -106,6 +107,7 @@ while True:
 
         # te uiti la coliziuni
         check_collision(pipe_list)
+        write_to_json_file([bird_cromoshome.to_dict()])
         # dai update la neuronii de input
         # dai compute la noua valoare. Daca e True generezi event
         #       pygame.event.post(fly_event)

@@ -31,3 +31,6 @@ class NeuralBird:
         self.pipe_bottom_height = pipe_bottom_height
         self.pipe_top_height = pipe_top_height
         self.velocity = velocity
+
+    def get_list_weights(self):
+        return self.weights.copy()
