@@ -32,14 +32,14 @@ MAX_GENERATII = 200000
 get_ticks_last_frame = 0
 dt = 0.01
 
-background_sf = pygame.image.load("assets/background-day.png").convert()
+background_sf = pygame.image.load("../assets/background-day.png").convert()
 background_sf = pygame.transform.scale2x(background_sf)
 
-floor_sf = pygame.image.load("assets/base.png").convert()
+floor_sf = pygame.image.load("../assets/base.png").convert()
 floor_sf = pygame.transform.scale2x(floor_sf)
 floor_x = 0
 
-bird_surface = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midflap.png").convert_alpha())
+bird_surface = pygame.transform.scale2x(pygame.image.load("../assets/bluebird-midflap.png").convert_alpha())
 
 FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
 fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
@@ -48,7 +48,7 @@ pygame.time.set_timer(SPAWNPIPE, 1200)
 pygame.event.post(pygame.event.Event(SPAWNPIPE))
 
 pipe_height = [400, 600, 800]
-pipe_surface = pygame.image.load("assets/pipe-green.png").convert()
+pipe_surface = pygame.image.load("../assets/pipe-green.png").convert()
 pipe_surface = pygame.transform.scale2x(pipe_surface)
 pipe_list = []
 

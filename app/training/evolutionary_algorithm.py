@@ -1,5 +1,3 @@
-import random
-
 from training.models.chromosome import Chromosome
 from training.models.neural_bird import NeuralBird
 
