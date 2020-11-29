@@ -22,7 +22,7 @@ up_velocity = 1000
 game_active = True
 high_score = 0
 velocity = 375
-number_of_birds = 50
+number_of_birds = 100
 bird_movement = [0 for _ in range(number_of_birds)]
 
 crossover_probability = 1.0
@@ -185,12 +185,12 @@ def eval_genomes(genomes, config):
                     # dai update la neuronii de input
                     for i in range(0, len(pipe_list), 2):
                         distance = pipe_list[i].bottomleft[0] - bird_rects[index].bottomright[0]
-                        pipe_down = pipe_list[i].topright[1] - bird_rects[index].bottomleft[1]
-                        pipe_up = pipe_list[i + 1].bottomright[1] - bird_rects[index].topleft[1]
+                        pipe_down = abs(pipe_list[i].topright[1] - bird_rects[index].bottomleft[1])
+                        pipe_up = abs(pipe_list[i + 1].bottomright[1] - bird_rects[index].topleft[1])
                         if distance > 0:
                             break
 
-                    output = nets[index].activate((distance, bird_rects[index].centery, pipe_down, pipe_up, velocity))
+                    output = nets[index].activate((distance,  pipe_down, pipe_up))
 
                     if output[0] > 0.5:  # we use a tanh activation function so result will be between -1 and 1. if over 0.5 jump
                         pygame.event.post(fly_events[index])
