@@ -3,7 +3,6 @@ import random
 
 from training.evolutionary_algorithm import one_generation_evolution
 from training.models.chromosome import Chromosome
-from training.models.neural_bird import NeuralBird
 from utils import write_to_json_file
 
 
@@ -21,7 +20,7 @@ def create_pipe():
 
 def move_pipes(pipes):
     for pipe in pipes:
-        pipe.centerx -= velocity*dt
+        pipe.centerx -= velocity * dt
     return pipes
 
 
@@ -67,9 +66,9 @@ clock = pygame.time.Clock()
 game_font = pygame.font.Font("assets/04B_19.ttf", 40)
 
 # Game Variables
-scale_factor=70
-gravity = 0.35*scale_factor
-up_velocity=12
+scale_factor = 70
+gravity = 0.35 * scale_factor
+up_velocity = 12
 
 game_active = True
 score = 0
@@ -82,9 +81,8 @@ crossover_probability = 1.0
 mutation_probability = 0.05
 percentage_for_parenting = 0.5
 MAX_GENERATII = 200000
-get_ticks_last_frame=0
-dt=0.01
-
+get_ticks_last_frame = 0
+dt = 0.01
 
 background_sf = pygame.image.load("assets/background-day.png").convert()
 background_sf = pygame.transform.scale2x(background_sf)
@@ -142,7 +140,7 @@ for current_generation in range(MAX_GENERATII):
 
         if game_active:
             # Bird
-            bird_movement = list(map(lambda x: x + gravity*dt, bird_movement))
+            bird_movement = list(map(lambda x: x + gravity * dt, bird_movement))
             rotated_bird = [rotate_bird(bird_surface, i) for i in range(number_of_birds)]
             for index in range(number_of_birds):
                 if active_birds[index]:
@@ -162,7 +160,7 @@ for current_generation in range(MAX_GENERATII):
                 for i in range(0, len(pipe_list), 2):
                     distance = pipe_list[i].bottomleft[0] - bird_rects[index].bottomright[0]
                     pipe_down = pipe_list[i].topright[1] - bird_rects[index].bottomleft[1]
-                    pipe_up = pipe_list[i+1].bottomright[1] - bird_rects[index].topleft[1]
+                    pipe_up = pipe_list[i + 1].bottomright[1] - bird_rects[index].topleft[1]
                     if distance > 0:
                         break
 
@@ -205,6 +203,6 @@ for current_generation in range(MAX_GENERATII):
             floor_x = 0
 
         pygame.display.update()
-        t=pygame.time.get_ticks()
-        dt=(t-get_ticks_last_frame)/1000
-        get_ticks_last_frame=t
+        t = pygame.time.get_ticks()
+        dt = (t - get_ticks_last_frame) / 1000
+        get_ticks_last_frame = t
