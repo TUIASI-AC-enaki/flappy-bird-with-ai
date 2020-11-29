@@ -45,6 +45,7 @@ FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
 fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
 SPAWNPIPE = pygame.USEREVENT
 pygame.time.set_timer(SPAWNPIPE, 1200)
+pygame.event.post(pygame.event.Event(SPAWNPIPE))
 
 pipe_height = [400, 600, 800]
 pipe_surface = pygame.image.load("assets/pipe-green.png").convert()
@@ -153,9 +154,6 @@ def eval_genomes(genomes, config):
                 if len(pipe_list) > 8:
                     del pipe_list[0]
                     del pipe_list[0]
-                    print("Hello")
-                    print(pipe_list[1])
-                    print(pipe_list[0])
             if event.type in FLY:
                 ind = event.type - FLY[0]
                 bird_movement[ind] = 0
@@ -178,9 +176,9 @@ def eval_genomes(genomes, config):
                         # ge.pop(index)
                         # bird_cromoshomes[index].complete_training(score)
 
-                    distance = 10000
-                    pipe_up = 10000
-                    pipe_down = 10000
+                    distance = 100
+                    pipe_up = 100
+                    pipe_down = 100
 
                     # dai update la neuronii de input
                     for i in range(0, len(pipe_list), 2):

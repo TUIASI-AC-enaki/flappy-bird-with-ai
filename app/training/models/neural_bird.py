@@ -2,7 +2,7 @@ from utils import generate_random_range
 
 
 class NeuralBird:
-    def __init__(self, param=5):
+    def __init__(self, param=6):
         self.distance = 0
         self.bird_height = 0
         self.pipe_bottom_height = 0
@@ -18,7 +18,8 @@ class NeuralBird:
                  self.bird_height * self.weights[1] + \
                  self.pipe_bottom_height * self.weights[2] + \
                  self.pipe_top_height * self.weights[3] + \
-                 self.velocity * self.weights[4]
+                 self.velocity * self.weights[4] + \
+                 self.weights[5]
         return result > 0
 
     def update_inputs(self, distance, bird_height, pipe_bottom_height, pipe_top_height, velocity):

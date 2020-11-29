@@ -152,26 +152,26 @@ for current_generation in range(MAX_GENERATII):
 
                         bird_cromoshomes[index].complete_training(score)
 
-                distance = 10000
-                pipe_up = 10000
-                pipe_down = 10000
+                    distance = 100
+                    pipe_up = 100
+                    pipe_down = 100
 
-                # dai update la neuronii de input
-                for i in range(0, len(pipe_list), 2):
-                    distance = pipe_list[i].bottomleft[0] - bird_rects[index].bottomright[0]
-                    pipe_down = pipe_list[i].topright[1] - bird_rects[index].bottomleft[1]
-                    pipe_up = pipe_list[i + 1].bottomright[1] - bird_rects[index].topleft[1]
-                    if distance > 0:
-                        break
+                    # dai update la neuronii de input
+                    for i in range(0, len(pipe_list), 2):
+                        distance = pipe_list[i].bottomleft[0] - bird_rects[index].bottomright[0]
+                        pipe_down = pipe_list[i].topright[1] - bird_rects[index].bottomleft[1]
+                        pipe_up = pipe_list[i + 1].bottomright[1] - bird_rects[index].topleft[1]
+                        if distance > 0:
+                            break
 
-                bird_cromoshomes[index].bird.update_inputs(distance=distance, bird_height=bird_rects[index].centery,
-                                                           pipe_bottom_height=pipe_down, pipe_top_height=pipe_up,
-                                                           velocity=velocity)
+                    bird_cromoshomes[index].bird.update_inputs(distance=distance, bird_height=bird_rects[index].centery,
+                                                               pipe_bottom_height=pipe_down, pipe_top_height=pipe_up,
+                                                               velocity=velocity)
 
-                # dai compute la noua valoare. Daca e True generezi event
-                # print("Bird {}: {}".format(index, bird_cromoshomes[index].bird.compute_output()))
-                if bird_cromoshomes[index].bird.compute_output():
-                    pygame.event.post(fly_events[index])
+                    # dai compute la noua valoare. Daca e True generezi event
+                    # print("Bird {}: {}".format(index, bird_cromoshomes[index].bird.compute_output()))
+                    if bird_cromoshomes[index].bird.compute_output():
+                        pygame.event.post(fly_events[index])
 
             # cand mor toti faci gameActive = false
             game_active = any(active_birds)
