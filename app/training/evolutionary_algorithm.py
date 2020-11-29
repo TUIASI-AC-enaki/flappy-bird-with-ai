@@ -11,10 +11,9 @@ def select_parents(population: list, population_percent=0.5):
 
 def crossover(population: list, crossover_probability=0.9):
     children = []
-    new_population=population.copy()
-    random.shuffle(new_population)
-    for pair in list(zip(population,new_population)):
-            child = Chromosome.reproduce(pair[0], pair[1], crossover_probability)
+    for mother in population:
+        for father in population:
+            child = Chromosome.reproduce(mother, father, crossover_probability)
             if child is not None:
                 #print("\nMother: {}".format(mother.to_str()))
                 #print("Father: {}".format(father.to_str()))
@@ -23,7 +22,6 @@ def crossover(population: list, crossover_probability=0.9):
                 if len(children) >= len(population):
                     #print("Generated new {} children".format(len(children)))
                     return children
-
     return children
 
 
