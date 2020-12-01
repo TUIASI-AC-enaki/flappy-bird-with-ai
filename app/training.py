@@ -66,8 +66,8 @@ game_font = pygame.font.Font("assets/04B_19.ttf", 40)
 # Game Variables
 scale_factor = 70
 gravity = 0.35 * scale_factor
-# up_velocity = 900
-up_velocity = 12
+up_velocity = 10
+
 
 game_active = True
 score = 0
@@ -76,8 +76,8 @@ velocity = 375
 number_of_birds = 150
 bird_movement = [0 for _ in range(number_of_birds)]
 
-crossover_probability = 1.0
-mutation_probability = 0.05
+crossover_probability = 0.9
+mutation_probability = 0.2
 percentage_for_parenting = 0.5
 MAX_GENERATIONS = 200000
 get_ticks_last_frame = 0
@@ -148,8 +148,8 @@ for current_generation in range(1, MAX_GENERATIONS+1):
                     # te uiti la coliziuni
                     if check_collision(pipe_list, bird_rects[index]):
                         active_birds[index] = False
+                        bird_cromoshomes[index].complete_training(score)
 
-                        bird_chromosomes[index].complete_training(score)
 
                     distance = 100
                     pipe_up = 100
@@ -157,9 +157,9 @@ for current_generation in range(1, MAX_GENERATIONS+1):
 
                     # dai update la neuronii de input
                     for i in range(0, len(pipe_list), 2):
-                        distance = pipe_list[i].bottomleft[0] - bird_rects[index].bottomright[0]
-                        pipe_down = pipe_list[i].topright[1] - bird_rects[index].bottomleft[1]
-                        pipe_up = pipe_list[i + 1].bottomright[1] - bird_rects[index].topleft[1]
+                        distance = pipe_list[i].bottomright[0] + 1 - bird_rects[index].bottomleft[0]
+                        pipe_down = pipe_list[i].midtop[1] - bird_rects[index].bottomleft[1]
+                        pipe_up = pipe_list[i + 1].midbottom[1] - bird_rects[index].topleft[1]
                         if distance > 0:
                             break
 
