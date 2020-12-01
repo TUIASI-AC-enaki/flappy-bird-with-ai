@@ -40,10 +40,10 @@ class Chromosome:
 
     def complete_training(self, score):
         self.ancestor_generations += 1
-        # self.fitness = self.fitness * self.generations_alive + score
+        self.fitness = self.fitness * self.generations_alive + score
         self.generations_alive += 1
-        # self.fitness /= int(self.generations_alive)
-        self.fitness = max(self.fitness, score)
+        self.fitness /= int(self.generations_alive)
+        # self.fitness = max(self.fitness, score)
 
     def to_str(self):
         return str(self.bird.weights)
@@ -68,7 +68,8 @@ class Chromosome:
         if len(population) < population_size:
             for _ in range(population_size - len(population)):
                 population.append(Chromosome(NeuralBird()))
-
+        if len(population) > population_size:
+            population = population[:population_size]
         return population
 
     @staticmethod
