@@ -72,8 +72,8 @@ up_velocity = 10
 game_active = True
 score = 0
 high_score = 0
-velocity = 375
-number_of_birds = 150
+velocity = 300
+number_of_birds = 1
 bird_movement = [0 for _ in range(number_of_birds)]
 
 crossover_probability = 0.9
@@ -95,7 +95,8 @@ bird_surface = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midfl
 FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
 fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
 SPAWN_PIPE = pygame.USEREVENT
-pygame.time.set_timer(SPAWN_PIPE, 1200)
+pygame.time.set_timer(SPAWN_PIPE, 1600)
+pygame.event.post(pygame.event.Event(SPAWN_PIPE))
 
 for current_generation in range(1, MAX_GENERATIONS+1):
     score = 0
@@ -108,17 +109,17 @@ for current_generation in range(1, MAX_GENERATIONS+1):
     # bird_cromoshomes = [Chromosome(NeuralBird()) for _ in range(number_of_birds)]
     bird_chromosomes = Chromosome.read_from_file("training.json", population_size=number_of_birds)
 
-    bird_chromosomes = one_generation_evolution(bird_chromosomes,
-                                                crossover_probability=crossover_probability,
-                                                mutation_probability=mutation_probability,
-                                                finale_population_size=number_of_birds,
-                                                percentage_for_parenting=percentage_for_parenting)
+    # bird_chromosomes = one_generation_evolution(bird_chromosomes,
+    #                                             crossover_probability=crossover_probability,
+    #                                             mutation_probability=mutation_probability,
+    #                                             finale_population_size=number_of_birds,
+    #                                             percentage_for_parenting=percentage_for_parenting)
 
     pipe_surface = pygame.image.load("assets/pipe-green.png").convert()
     pipe_surface = pygame.transform.scale2x(pipe_surface)
     pipe_list = []
 
-    pipe_height = [400, 600, 800]
+    pipe_height = [i for i in range(400,850,50)]
 
     while True:
         for event in pygame.event.get():
@@ -148,12 +149,12 @@ for current_generation in range(1, MAX_GENERATIONS+1):
                     # te uiti la coliziuni
                     if check_collision(pipe_list, bird_rects[index]):
                         active_birds[index] = False
-                        bird_cromoshomes[index].complete_training(score)
+                        bird_chromosomes[index].complete_training(score)
 
 
-                    distance = 100
-                    pipe_up = 100
-                    pipe_down = 100
+                    distance = 1
+                    pipe_up = 1
+                    pipe_down = 1
 
                     # dai update la neuronii de input
                     for i in range(0, len(pipe_list), 2):
@@ -184,7 +185,7 @@ for current_generation in range(1, MAX_GENERATIONS+1):
             # resetare populatie
             game_active = True
             bird_chromosomes.sort(reverse=True)
-            write_to_json_file([bird_chromosomes[i].to_dict() for i in range(number_of_birds)])
+            #write_to_json_file([bird_chromosomes[i].to_dict() for i in range(number_of_birds)])
             if score > high_score:
                 high_score = score
             print("-> GAME OVER")
@@ -200,3 +201,4 @@ for current_generation in range(1, MAX_GENERATIONS+1):
         t = pygame.time.get_ticks()
         dt = (t - get_ticks_last_frame) / 1000
         get_ticks_last_frame = t
+        clock.tick(60)

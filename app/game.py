@@ -1,5 +1,6 @@
 import pygame, sys
 import random
+from training import NeuralBird
 
 
 def draw_floor():
@@ -29,7 +30,7 @@ def draw_pipes(pipes):
             screen.blit(flip_pipe, pipe)
 
 
-def check_collision(pipes):
+def check_collision(pipes, bird_rect):
     for pipe in pipes:
         if bird_rect.colliderect(pipe):
             death_sound.play()
@@ -81,11 +82,17 @@ clock = pygame.time.Clock()
 game_font = pygame.font.Font("assets/04B_19.ttf", 40)
 
 # Game Variables
-gravity = 0.25
+scale_factor = 70
+gravity = 0.35 * scale_factor
+up_velocity = 10
 bird_movement = 0
-game_active = True
+game_active = False
 score = 0
 high_score = 0
+get_ticks_last_frame = 0
+velocity = 300
+dt = 0.01
+player_lost = True
 
 background_sf = pygame.image.load("assets/background-day.png").convert()
 background_sf = pygame.transform.scale2x(background_sf)
@@ -102,6 +109,13 @@ bird_index = 0
 bird_surface = bird_frames[bird_index]
 bird_rect = bird_surface.get_rect(center=(100, 512))
 
+ai_surface = pygame.transform.scale2x(pygame.image.load("assets/redbird-midflap.png").convert_alpha())
+ai_rect = bird_surface.get_rect(center=(200, 512))
+ai_movement = 0
+ai_bird = NeuralBird([-0.6104996159116265, -0.29878728694945544, -0.681547440207237, -0.8945106674755301,
+                      -0.1442154288454358])
+bird_midflap = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midflap.png").convert_alpha())
+
 BIRDFLAP = pygame.USEREVENT + 1
 pygame.time.set_timer(BIRDFLAP, 200)
 
@@ -113,8 +127,8 @@ pipe_surface = pygame.image.load("assets/pipe-green.png").convert()
 pipe_surface = pygame.transform.scale2x(pipe_surface)
 pipe_list = []
 SPAWNPIPE = pygame.USEREVENT
-pygame.time.set_timer(SPAWNPIPE, 1200)
-pipe_height = [400, 600, 800]
+pygame.time.set_timer(SPAWNPIPE, 1600)
+pipe_height = [i for i in range(400, 850, 50)]
 
 game_over_surface = pygame.transform.scale2x(pygame.image.load("assets/message.png").convert_alpha())
 game_over_rect = game_over_surface.get_rect(center=(288, 512))
@@ -124,6 +138,8 @@ death_sound = pygame.mixer.Sound("assets/sounds/sfx_hit.wav")
 score_sound = pygame.mixer.Sound("assets/sounds/sfx_point.wav")
 score_sound_countdown = 100
 
+AI_EVENT = pygame.USEREVENT + 10
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -132,14 +148,16 @@ while True:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE and game_active:
                 bird_movement = 0
-                bird_movement -= 12
+                bird_movement -= up_velocity
                 flap_sound.play()
             if event.key == pygame.K_SPACE and not game_active:
                 game_active = True
                 pipe_list.clear()
                 bird_rect.center = (100, 512)
+                ai_rect.center = (200, 512)
                 bird_movement = 0
                 score = 0
+                pygame.event.post(pygame.event.Event(AI_EVENT))
 
         if event.type == SPAWNPIPE:
             pipe_list.extend(create_pipe())
@@ -150,15 +168,41 @@ while True:
             bird_index = (bird_index + 1) % 3
             bird_surface, bird_rect = bird_animation()
 
+        if event.type == AI_EVENT:
+            ai_movement = 0
+            ai_movement -= up_velocity
     screen.blit(background_sf, (0, 0))
 
     if game_active:
         # Bird
-        bird_movement += gravity
+        bird_movement += gravity * dt
         rotated_bird = rotate_bird(bird_surface)
         bird_rect.centery += bird_movement
         screen.blit(rotated_bird, bird_rect)
-        game_active = check_collision(pipe_list)
+        game_active = check_collision(pipe_list, bird_rect)
+        player_lost = True
+        # AI
+        screen.blit(ai_surface, ai_rect)
+        ai_movement += gravity * dt
+        rotated_ai = rotate_bird(ai_surface)
+        if not len(pipe_list) == 0:
+            ai_rect.centery += ai_movement
+        if game_active:
+            game_active = check_collision(pipe_list, ai_rect)
+            player_lost = False
+        distance = 1
+        pipe_down = 1
+        pipe_up = 1
+        for i in range(0, len(pipe_list), 2):
+            distance = pipe_list[i].bottomright[0] + 1 - ai_rect.bottomleft[0]
+            pipe_down = pipe_list[i].midtop[1] - ai_rect.bottomleft[1]
+            pipe_up = pipe_list[i + 1].midbottom[1] - ai_rect.topleft[1]
+            if distance > 0:
+                break
+
+        ai_bird.update_inputs(distance, bird_rect.centery, pipe_up, pipe_down, velocity)
+        if ai_bird.compute_output():
+            pygame.event.post(pygame.event.Event(AI_EVENT))
 
         # Pipes
         pipe_list = move_pipes(pipe_list)
@@ -174,6 +218,8 @@ while True:
         high_score = update_score(score, high_score)
         score_display("game_over")
         screen.blit(game_over_surface, game_over_rect)
+        if score > 0:
+            print(player_lost)
     # Floor
     floor_x -= 1
     draw_floor()
@@ -181,4 +227,8 @@ while True:
         floor_x = 0
 
     pygame.display.update()
-    clock.tick(120)
+    pygame.display.update()
+    t = pygame.time.get_ticks()
+    dt = (t - get_ticks_last_frame) / 1000
+    get_ticks_last_frame = t
+    clock.tick(60)
