@@ -234,6 +234,8 @@ while True:
         if ai_bird.compute_output():
             pygame.event.post(pygame.event.Event(AI_EVENT))
             pygame.event.post(pygame.event.Event(AIFLAP))
+            # you can comment this if you don;t like ai flappy flap
+            flap_sound.play()
 
         # Pipes
         pipe_list = move_pipes(pipe_list)
