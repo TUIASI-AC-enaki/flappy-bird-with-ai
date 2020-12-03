@@ -1,6 +1,7 @@
 import pygame, sys
 import random
 from training import NeuralBird
+from training.models.chromosome import Chromosome
 
 
 def draw_floor():
@@ -48,20 +49,35 @@ def rotate_bird(bird):
     return new_bird
 
 
+def rotate_ai(bird):
+    new_bird = pygame.transform.rotozoom(bird, -ai_movement * 3, 1)
+    return new_bird
+
+
 def bird_animation():
     new_bird = bird_frames[bird_index]
     new_bird_rect = new_bird.get_rect(center=(100, bird_rect.centery))
     return new_bird, new_bird_rect
 
 
+def ai_animation():
+    new_bird = ai_frames[ai_index]
+    new_bird_rect = new_bird.get_rect(center=(100+ai_distance_from_bird, ai_rect.centery))
+    return new_bird, new_bird_rect
+
+
 def score_display(game_state):
-    if game_state == "main_game":
+    if game_state == "main_game" or game_state == "init":
         score_surface = game_font.render(str(int(score)), True, (255, 255, 255))
         score_rect = score_surface.get_rect(center=(288, 100))
         screen.blit(score_surface, score_rect)
     if game_state == "game_over":
-        score_surface = game_font.render(f"Score: {str(int(score))}", True, (255, 255, 255))
+        score_surface = game_font.render("You win!" if not player_lost else "You lost!", True, (0, 255, 0) if not player_lost else (255, 0, 0))
         score_rect = score_surface.get_rect(center=(288, 100))
+        screen.blit(score_surface, score_rect)
+
+        score_surface = game_font.render(f"Score: {str(int(score))}", True, (255, 255, 255))
+        score_rect = score_surface.get_rect(center=(288, 150))
         screen.blit(score_surface, score_rect)
 
         high_score_surface = game_font.render(f"High Score: {str(int(high_score))}", True, (255, 255, 255))
@@ -104,20 +120,28 @@ floor_x = 0
 bird_downflap = pygame.transform.scale2x(pygame.image.load("assets/bluebird-downflap.png").convert_alpha())
 bird_midflap = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midflap.png").convert_alpha())
 bird_upflap = pygame.transform.scale2x(pygame.image.load("assets/bluebird-upflap.png").convert_alpha())
-bird_frames = [bird_downflap, bird_midflap, bird_upflap]
+bird_frames = [bird_downflap, bird_midflap, bird_upflap, bird_midflap]
 bird_index = 0
 bird_surface = bird_frames[bird_index]
 bird_rect = bird_surface.get_rect(center=(100, 512))
 
-ai_surface = pygame.transform.scale2x(pygame.image.load("assets/redbird-midflap.png").convert_alpha())
-ai_rect = bird_surface.get_rect(center=(200, 512))
+ai_downflap = pygame.transform.scale2x(pygame.image.load("assets/redbird-downflap.png").convert_alpha())
+ai_midflap = pygame.transform.scale2x(pygame.image.load("assets/redbird-midflap.png").convert_alpha())
+ai_upflap = pygame.transform.scale2x(pygame.image.load("assets/redbird-upflap.png").convert_alpha())
+ai_frames = [ai_downflap, ai_midflap, ai_upflap, ai_midflap]
+ai_index = 0
+ai_surface = ai_frames[ai_index]
+
+ai_distance_from_bird = 150
+ai_rect = bird_surface.get_rect(center=(100+ai_distance_from_bird, 512))
 ai_movement = 0
-ai_bird = NeuralBird([-0.6104996159116265, -0.29878728694945544, -0.681547440207237, -0.8945106674755301,
-                      -0.1442154288454358])
-bird_midflap = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midflap.png").convert_alpha())
+ai_weights = Chromosome.read_best_from_file("training.json")
+ai_bird = NeuralBird(ai_weights if ai_weights else [-0.6104996159116265, -0.29878728694945544, -0.681547440207237, -0.8945106674755301, -0.1442154288454358])
 
 BIRDFLAP = pygame.USEREVENT + 1
+AIFLAP = pygame.USEREVENT + 11
 pygame.time.set_timer(BIRDFLAP, 200)
+pygame.time.set_timer(AIFLAP, 200)
 
 # bird_surface = pygame.image.load("assets/bluebird-midflap.png").convert_alpha()
 # bird_surface = pygame.transform.scale2x(bird_surface)
@@ -157,7 +181,6 @@ while True:
                 ai_rect.center = (200, 512)
                 bird_movement = 0
                 score = 0
-                pygame.event.post(pygame.event.Event(AI_EVENT))
 
         if event.type == SPAWNPIPE:
             pipe_list.extend(create_pipe())
@@ -165,12 +188,16 @@ while True:
                 del pipe_list[0]
                 del pipe_list[0]
         if event.type == BIRDFLAP:
-            bird_index = (bird_index + 1) % 3
+            bird_index = (bird_index + 1) % len(bird_frames)
             bird_surface, bird_rect = bird_animation()
 
         if event.type == AI_EVENT:
             ai_movement = 0
             ai_movement -= up_velocity
+        if event.type == AIFLAP:
+            ai_index = (ai_index + 1) % len(ai_frames)
+            ai_surface, ai_rect = ai_animation()
+
     screen.blit(background_sf, (0, 0))
 
     if game_active:
@@ -182,11 +209,14 @@ while True:
         game_active = check_collision(pipe_list, bird_rect)
         player_lost = True
         # AI
-        screen.blit(ai_surface, ai_rect)
         ai_movement += gravity * dt
-        rotated_ai = rotate_bird(ai_surface)
         if not len(pipe_list) == 0:
+            rotated_ai = rotate_ai(ai_surface)
             ai_rect.centery += ai_movement
+            screen.blit(rotated_ai, ai_rect)
+        else:
+            screen.blit(ai_surface, ai_rect)
+
         if game_active:
             game_active = check_collision(pipe_list, ai_rect)
             player_lost = False
@@ -200,26 +230,31 @@ while True:
             if distance > 0:
                 break
 
-        ai_bird.update_inputs(distance, bird_rect.centery, pipe_up, pipe_down, velocity)
+        ai_bird.update_inputs(distance, ai_rect.centery, pipe_up, pipe_down, velocity)
         if ai_bird.compute_output():
             pygame.event.post(pygame.event.Event(AI_EVENT))
+            pygame.event.post(pygame.event.Event(AIFLAP))
+            # you can comment this if you don;t like ai flappy flap
+            flap_sound.play()
 
         # Pipes
         pipe_list = move_pipes(pipe_list)
         draw_pipes(pipe_list)
 
-        score += 0.01
-        score_sound_countdown -= 1
-        if score_sound_countdown <= 0:
-            score_sound.play()
-            score_sound_countdown = 100
+        if len(pipe_list) > 0:
+            if len(list(filter(lambda pipe: 92 <= pipe.centerx <= 97, pipe_list))) == 2:
+                score += 1
+                score_sound.play()
+
         score_display("main_game")
     else:
         high_score = update_score(score, high_score)
-        score_display("game_over")
         screen.blit(game_over_surface, game_over_rect)
         if score > 0:
-            print(player_lost)
+            score_display("game_over")
+        else:
+            score_display("init")
+
     # Floor
     floor_x -= 1
     draw_floor()
