@@ -28,7 +28,7 @@ class Button:
         screen.blit(self.surface, (self.x, self.y))
 
     def click(self, event):
-        global button_font, stop_evolution_flag
+        global button_font, stop_evolution_flag, high_score, score
         x, y = pygame.mouse.get_pos()
         if event.type == pygame.MOUSEBUTTONDOWN:
             if pygame.mouse.get_pressed()[0]:
@@ -36,6 +36,7 @@ class Button:
                     if stop_evolution_flag:
                         self.change_text("Stop evolution", font=button_font, bg="red")
                     else:
+                        high_score = score if score > high_score else high_score
                         self.change_text("Start evolution", font=button_font, bg="navy")
                     stop_evolution_flag = not stop_evolution_flag
 
@@ -134,13 +135,13 @@ floor_sf = pygame.image.load("assets/base.png").convert()
 floor_sf = pygame.transform.scale2x(floor_sf)
 floor_x = 0
 
-bird_surface = pygame.transform.scale2x(pygame.image.load("assets/bluebird-midflap.png").convert_alpha())
+bird_surface = pygame.transform.scale2x(pygame.image.load("assets/redbird-midflap.png").convert_alpha())
 
 FLY = [pygame.USEREVENT + i for i in range(1, number_of_birds + 1)]
 fly_events = [pygame.event.Event(FLY[i]) for i in range(number_of_birds)]
 SPAWN_PIPE = pygame.USEREVENT
+#pygame.event.post(pygame.event.Event(SPAWN_PIPE))
 pygame.time.set_timer(SPAWN_PIPE, 1600)
-pygame.event.post(pygame.event.Event(SPAWN_PIPE))
 
 
 stop_evolution_flag = True
@@ -161,7 +162,7 @@ while True:
             break
         score = 0
         print("\nCURRENT GENERATION: {}".format(current_generation))
-        bird_rects = [bird_surface.get_rect(center=(100, 512)) for _ in range(number_of_birds)]
+        bird_rects = [bird_surface.get_rect(center=(200, 512)) for _ in range(number_of_birds)]
         active_birds = [True] * number_of_birds
 
         # pygame.time.set_timer(FLY, 850)
@@ -183,6 +184,9 @@ while True:
 
         while True:
             if stop_evolution_flag:
+                for index in range(len(bird_chromosomes)):
+                    if active_birds[index]:
+                        bird_chromosomes[index].complete_training(score)
                 bird_chromosomes.sort(reverse=True)
                 write_to_json_file([bird_chromosomes[i].to_dict() for i in range(number_of_birds)])
                 break
@@ -217,10 +221,12 @@ while True:
                             bird_chromosomes[index].complete_training(score)
 
 
-                        distance = 1
-                        pipe_up = 1
-                        pipe_down = 1
-
+                        distance = None
+                        pipe_up = None
+                        pipe_down = None
+                        if len(pipe_list) < 2:
+                            bird_movement[index] = 0
+                            continue
                         # dai update la neuronii de input
                         for i in range(0, len(pipe_list), 2):
                             distance = pipe_list[i].bottomright[0] + 1 - bird_rects[index].bottomleft[0]

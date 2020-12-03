@@ -73,5 +73,10 @@ class Chromosome:
         return population
 
     @staticmethod
+    def read_best_from_file(filename):
+        data = read_dict_from_json(filename)
+        return data[0]["weights"] if data else None
+
+    @staticmethod
     def generate_new_random_population(population_size):
         return [Chromosome(NeuralBird()) for _ in range(population_size)]
