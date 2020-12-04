@@ -12,7 +12,7 @@ def draw_floor():
 def create_pipe():
     random_pipe_pos = random.choice(pipe_height)
     bottom_pipe = pipe_surface.get_rect(midtop=(700, random_pipe_pos))
-    top_pipe = pipe_surface.get_rect(midbottom=(700, random_pipe_pos - 300))
+    top_pipe = pipe_surface.get_rect(midbottom=(700, random_pipe_pos - pipe_height_distance))
     return bottom_pipe, top_pipe
 
 
@@ -98,6 +98,7 @@ clock = pygame.time.Clock()
 game_font = pygame.font.Font("assets/04B_19.ttf", 40)
 
 # Game Variables
+pipe_height_distance=200
 scale_factor = 70
 gravity = 0.35 * scale_factor
 up_velocity = 10
@@ -132,8 +133,8 @@ ai_frames = [ai_downflap, ai_midflap, ai_upflap, ai_midflap]
 ai_index = 0
 ai_surface = ai_frames[ai_index]
 
-ai_distance_from_bird = 150
-ai_rect = bird_surface.get_rect(center=(100+ai_distance_from_bird, 512))
+ai_distance_from_bird = 100
+ai_rect = ai_surface.get_rect(center=(100+ai_distance_from_bird, 512))
 ai_movement = 0
 ai_weights = Chromosome.read_best_from_file("training.json")
 ai_bird = NeuralBird(ai_weights if ai_weights else [-0.6104996159116265, -0.29878728694945544, -0.681547440207237, -0.8945106674755301, -0.1442154288454358])
@@ -178,7 +179,8 @@ while True:
                 game_active = True
                 pipe_list.clear()
                 bird_rect.center = (100, 512)
-                ai_rect.center = (200, 512)
+                ai_rect.center = (100+ai_distance_from_bird, 512)
+                ai_movement=0
                 bird_movement = 0
                 score = 0
 
@@ -230,12 +232,12 @@ while True:
             if distance > 0:
                 break
 
-        ai_bird.update_inputs(distance, ai_rect.centery, pipe_up, pipe_down, velocity)
+        ai_bird.update_inputs(distance, ai_rect.centery, pipe_top_height=pipe_up, pipe_bottom_height=pipe_down, velocity=velocity)
         if ai_bird.compute_output():
             pygame.event.post(pygame.event.Event(AI_EVENT))
-            pygame.event.post(pygame.event.Event(AIFLAP))
-            # you can comment this if you don;t like ai flappy flap
-            flap_sound.play()
+            #pygame.event.post(pygame.event.Event(AIFLAP))
+            # you can comment this if you don;t like ai flappy flap soundy sound do flap flap
+            #flap_sound.play()
 
         # Pipes
         pipe_list = move_pipes(pipe_list)

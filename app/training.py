@@ -48,7 +48,7 @@ def draw_floor():
 def create_pipe():
     random_pipe_pos = random.choice(pipe_height)
     bottom_pipe = pipe_surface.get_rect(midtop=(700, random_pipe_pos))
-    top_pipe = pipe_surface.get_rect(midbottom=(700, random_pipe_pos - 300))
+    top_pipe = pipe_surface.get_rect(midbottom=(700, random_pipe_pos - pipe_height_distance))
     return bottom_pipe, top_pipe
 
 
@@ -112,13 +112,13 @@ small_font = pygame.font.SysFont('Corbel', 35)
 scale_factor = 70
 gravity = 0.35 * scale_factor
 up_velocity = 10
-
+pipe_height_distance=200
 
 game_active = True
 score = 0
 high_score = 0
 velocity = 300
-number_of_birds = 100
+number_of_birds = 150
 bird_movement = [0 for _ in range(number_of_birds)]
 
 crossover_probability = 0.9
@@ -260,6 +260,8 @@ while True:
                 if score > high_score:
                     high_score = score
                 print("-> GAME OVER")
+                for bird in bird_rects:
+                    bird.center=(100,512)
                 break
 
             # Floor
