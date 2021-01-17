@@ -235,9 +235,9 @@ while True:
                             if distance > 0:
                                 break
 
-                        bird_chromosomes[index].bird.update_inputs(distance=distance, bird_height=bird_rects[index].centery,
+                        bird_chromosomes[index].bird.update_inputs(bird_height=bird_rects[index].centery,
                                                                    pipe_bottom_height=pipe_down, pipe_top_height=pipe_up,
-                                                                   velocity=velocity)
+                                                                   )
 
                         # print("Bird {}: {}".format(index, bird_cromoshomes[index].bird.compute_output()))
                         if bird_chromosomes[index].bird.compute_output():

@@ -232,7 +232,7 @@ while True:
             if distance > 0:
                 break
 
-        ai_bird.update_inputs(distance, ai_rect.centery, pipe_top_height=pipe_up, pipe_bottom_height=pipe_down, velocity=velocity)
+        ai_bird.update_inputs(ai_rect.centery, pipe_top_height=pipe_up, pipe_bottom_height=pipe_down)
         if ai_bird.compute_output():
             pygame.event.post(pygame.event.Event(AI_EVENT))
             #pygame.event.post(pygame.event.Event(AIFLAP))
