@@ -40,9 +40,9 @@ to the initial one. We make mutations and keep only the best individuals.
 * As a fitness function we used the distance that a bird travels until it hits an obstacle.
 * When evolution is stopped, or all ai birds are dead, their weights and other information (generations alive, ancestor generations, average score per all generations alive) are put in the training.json file
 
-### GUI
+## GUI
 
-#### Training
+### Training
 
 There are 2 buttons: 
 * Start Evolution - start training using the data from training.json
@@ -52,9 +52,9 @@ In order to start the training run `training.py` file.
 
 ![Training](https://github.com/TUIASI-AC-enaki/flappy-bird-with-ai/blob/main/documentation/ss/training.png)
 
-#### Game
+### Game
 
-In order to start the training run `game.py` file.
+In order to start the game run `game.py` file.
 
 ![Game](https://github.com/TUIASI-AC-enaki/flappy-bird-with-ai/blob/main/documentation/ss/game.png)
 
