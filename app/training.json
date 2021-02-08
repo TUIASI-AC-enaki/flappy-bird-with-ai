@@ -1,8 +1,8 @@
 [
  {
-  "score": 226.39874999992435,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 201.92222222215497,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
    0.029563157465176015,
@@ -12,9 +12,9 @@
   ]
  },
  {
-  "score": 226.39874999992435,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 201.92222222215497,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
    0.029563157465176015,
@@ -24,9 +24,9 @@
   ]
  },
  {
-  "score": 168.13999999993672,
-  "generations_alive": 7,
-  "ancestor_generations": 153,
+  "score": 147.88624999994462,
+  "generations_alive": 8,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
    0.029563157465176015,
@@ -36,9 +36,9 @@
   ]
  },
  {
-  "score": 152.42499999996213,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 136.1677777777441,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -48,9 +48,9 @@
   ]
  },
  {
-  "score": 142.24499999992503,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 127.11888888882224,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
    0.029563157465176015,
@@ -60,9 +60,9 @@
   ]
  },
  {
-  "score": 142.00249999994085,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 126.90333333328074,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -72,9 +72,9 @@
   ]
  },
  {
-  "score": 124.05999999993904,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 110.95444444439025,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
    0.029563157465176015,
@@ -84,33 +84,45 @@
   ]
  },
  {
-  "score": 117.19857142851926,
-  "generations_alive": 7,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.6129938324656734
-  ]
- },
- {
-  "score": 101.7549999999504,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.6129938324656734
-  ]
- },
- {
-  "score": 95.87999999997278,
+  "score": 103.31249999995434,
   "generations_alive": 8,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.6129938324656734
+  ]
+ },
+ {
+  "score": 93.05999999995491,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.6129938324656734
+  ]
+ },
+ {
+  "score": 87.31909090904477,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.6129938324656734
+  ]
+ },
+ {
+  "score": 85.90555555553135,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.14096291696931607,
    0.029563157465176015,
@@ -120,21 +132,9 @@
   ]
  },
  {
-  "score": 95.43999999994926,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.6129938324656734
-  ]
- },
- {
-  "score": 92.02099999994911,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 84.21090909086283,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -144,9 +144,9 @@
   ]
  },
  {
-  "score": 92.02099999994911,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 84.21090909086283,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -156,9 +156,9 @@
   ]
  },
  {
-  "score": 90.76624999996505,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 81.35999999996892,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -168,9 +168,9 @@
   ]
  },
  {
-  "score": 90.52374999998086,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 81.14444444442742,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -180,9 +180,9 @@
   ]
  },
  {
-  "score": 53.216999999982384,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 48.934545454529434,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -192,9 +192,9 @@
   ]
  },
  {
-  "score": 53.216999999982384,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 48.934545454529434,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -204,9 +204,9 @@
   ]
  },
  {
-  "score": 50.837999999981164,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 46.771818181801045,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -216,9 +216,9 @@
   ]
  },
  {
-  "score": 50.837999999981164,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 46.771818181801045,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -228,9 +228,9 @@
   ]
  },
  {
-  "score": 44.8166666666472,
-  "generations_alive": 24,
-  "ancestor_generations": 153,
+  "score": 43.26839999998131,
+  "generations_alive": 25,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
    0.029563157465176015,
@@ -240,9 +240,9 @@
   ]
  },
  {
-  "score": 44.8166666666472,
-  "generations_alive": 24,
-  "ancestor_generations": 153,
+  "score": 43.26839999998131,
+  "generations_alive": 25,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -252,9 +252,9 @@
   ]
  },
  {
-  "score": 41.83999999998025,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 38.802499999988434,
+  "generations_alive": 16,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -264,9 +264,9 @@
   ]
  },
  {
-  "score": 40.98199999998767,
-  "generations_alive": 15,
-  "ancestor_generations": 153,
+  "score": 38.802499999988434,
+  "generations_alive": 16,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -276,21 +276,9 @@
   ]
  },
  {
-  "score": 40.98199999998767,
-  "generations_alive": 15,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.6129938324656734
-  ]
- },
- {
-  "score": 40.98199999998767,
-  "generations_alive": 15,
-  "ancestor_generations": 153,
+  "score": 38.802499999988434,
+  "generations_alive": 16,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
    0.029563157465176015,
@@ -300,9 +288,21 @@
   ]
  },
  {
-  "score": 40.72499999999542,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 38.59181818180022,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.6129938324656734
+  ]
+ },
+ {
+  "score": 36.8788888888848,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.4002850933177915,
    0.029563157465176015,
@@ -312,9 +312,9 @@
   ]
  },
  {
-  "score": 40.72499999999542,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 36.8788888888848,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.21528042182919482,
    0.029563157465176015,
@@ -324,9 +324,9 @@
   ]
  },
  {
-  "score": 38.92933333332087,
-  "generations_alive": 15,
-  "ancestor_generations": 153,
+  "score": 36.87812499998831,
+  "generations_alive": 16,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -336,9 +336,9 @@
   ]
  },
  {
-  "score": 38.92933333332087,
-  "generations_alive": 15,
-  "ancestor_generations": 153,
+  "score": 36.87812499998831,
+  "generations_alive": 16,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -348,9 +348,9 @@
   ]
  },
  {
-  "score": 38.92933333332087,
-  "generations_alive": 15,
-  "ancestor_generations": 153,
+  "score": 36.87812499998831,
+  "generations_alive": 16,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
@@ -360,9 +360,9 @@
   ]
  },
  {
-  "score": 33.16195121950204,
-  "generations_alive": 41,
-  "ancestor_generations": 153,
+  "score": 32.517857142847234,
+  "generations_alive": 42,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
    0.029563157465176015,
@@ -372,9 +372,69 @@
   ]
  },
  {
-  "score": 30.911999999996187,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 29.280769230761003,
+  "generations_alive": 52,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.8171026765771465
+  ]
+ },
+ {
+  "score": 29.280769230761003,
+  "generations_alive": 52,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.8171026765771465
+  ]
+ },
+ {
+  "score": 29.280769230761003,
+  "generations_alive": 52,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.8171026765771465
+  ]
+ },
+ {
+  "score": 28.74229166665999,
+  "generations_alive": 48,
+  "ancestor_generations": 154,
+  "weights": [
+   0.6230185979749241,
+   0.029563157465176015,
+   -0.8487008478104601,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 28.728301886784383,
+  "generations_alive": 53,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.8171026765771465
+  ]
+ },
+ {
+  "score": 28.657272727269252,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.3080360479614481,
    0.029563157465176015,
@@ -384,9 +444,9 @@
   ]
  },
  {
-  "score": 30.911999999996187,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 28.657272727269252,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.38813696792846364,
    0.029563157465176015,
@@ -396,45 +456,9 @@
   ]
  },
  {
-  "score": 29.7350980392073,
-  "generations_alive": 51,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.8171026765771465
-  ]
- },
- {
-  "score": 29.7350980392073,
-  "generations_alive": 51,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.8171026765771465
-  ]
- },
- {
-  "score": 29.7350980392073,
-  "generations_alive": 51,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.8171026765771465
-  ]
- },
- {
-  "score": 29.36083333333175,
-  "generations_alive": 12,
-  "ancestor_generations": 153,
+  "score": 27.57230769230622,
+  "generations_alive": 13,
+  "ancestor_generations": 154,
   "weights": [
    0.3080360479614481,
    0.029563157465176015,
@@ -444,9 +468,9 @@
   ]
  },
  {
-  "score": 29.36083333333175,
-  "generations_alive": 12,
-  "ancestor_generations": 153,
+  "score": 27.57230769230622,
+  "generations_alive": 13,
+  "ancestor_generations": 154,
   "weights": [
    0.3459001070086929,
    0.029563157465176015,
@@ -456,33 +480,9 @@
   ]
  },
  {
-  "score": 29.223829787227224,
-  "generations_alive": 47,
-  "ancestor_generations": 153,
-  "weights": [
-   0.6230185979749241,
-   0.029563157465176015,
-   -0.8487008478104601,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 29.163269230761006,
-  "generations_alive": 52,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.8171026765771465
-  ]
- },
- {
-  "score": 25.328666666664926,
-  "generations_alive": 15,
-  "ancestor_generations": 153,
+  "score": 24.127499999998363,
+  "generations_alive": 16,
+  "ancestor_generations": 154,
   "weights": [
    0.14096291696931607,
    0.029563157465176015,
@@ -492,9 +492,9 @@
   ]
  },
  {
-  "score": 24.933999999996516,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 23.2227272727241,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.3459001070086929,
    0.029563157465176015,
@@ -504,9 +504,9 @@
   ]
  },
  {
-  "score": 24.933999999996516,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 23.2227272727241,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    0.3459001070086929,
    0.029563157465176015,
@@ -516,45 +516,9 @@
   ]
  },
  {
-  "score": 24.40624999999593,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
-  "weights": [
-   0.3459001070086929,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.6129938324656734
-  ]
- },
- {
-  "score": 24.40624999999593,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
-  "weights": [
-   0.3459001070086929,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.6129938324656734
-  ]
- },
- {
-  "score": 24.349999999996637,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
-  "weights": [
-   0.14096291696931607,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.6129938324656734
-  ]
- },
- {
-  "score": 23.321063829782535,
-  "generations_alive": 47,
-  "ancestor_generations": 153,
+  "score": 22.962499999995398,
+  "generations_alive": 48,
+  "ancestor_generations": 154,
   "weights": [
    0.9402098991130545,
    0.029563157465176015,
@@ -564,9 +528,45 @@
   ]
  },
  {
-  "score": 23.22210526315765,
-  "generations_alive": 19,
-  "ancestor_generations": 153,
+  "score": 22.69181818181512,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
+  "weights": [
+   0.14096291696931607,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.6129938324656734
+  ]
+ },
+ {
+  "score": 22.373333333329704,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
+  "weights": [
+   0.3459001070086929,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.6129938324656734
+  ]
+ },
+ {
+  "score": 22.373333333329704,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
+  "weights": [
+   0.3459001070086929,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.6129938324656734
+  ]
+ },
+ {
+  "score": 22.366499999999764,
+  "generations_alive": 20,
+  "ancestor_generations": 154,
   "weights": [
    0.7334769023075325,
    0.029563157465176015,
@@ -576,21 +576,9 @@
   ]
  },
  {
-  "score": 22.776999999998065,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
-  "weights": [
-   0.5077898293871828,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.6129938324656734
-  ]
- },
- {
-  "score": 21.782448979582643,
-  "generations_alive": 49,
-  "ancestor_generations": 153,
+  "score": 21.468999999990988,
+  "generations_alive": 50,
+  "ancestor_generations": 154,
   "weights": [
    0.6230185979749241,
    0.029563157465176015,
@@ -600,9 +588,21 @@
   ]
  },
  {
-  "score": 20.76510638297395,
-  "generations_alive": 47,
-  "ancestor_generations": 153,
+  "score": 21.261818181816412,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
+  "weights": [
+   0.5077898293871828,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.6129938324656734
+  ]
+ },
+ {
+  "score": 20.459791666661992,
+  "generations_alive": 48,
+  "ancestor_generations": 154,
   "weights": [
    0.9547909973033555,
    0.029563157465176015,
@@ -612,9 +612,9 @@
   ]
  },
  {
-  "score": 20.077500000001475,
-  "generations_alive": 12,
-  "ancestor_generations": 153,
+  "score": 19.003076923078275,
+  "generations_alive": 13,
+  "ancestor_generations": 154,
   "weights": [
    0.9402098991130545,
    0.029563157465176015,
@@ -624,9 +624,9 @@
   ]
  },
  {
-  "score": 16.44624999999763,
-  "generations_alive": 24,
-  "ancestor_generations": 153,
+  "score": 16.03279999999772,
+  "generations_alive": 25,
+  "ancestor_generations": 154,
   "weights": [
    -0.7899428582338817,
    0.029563157465176015,
@@ -636,9 +636,9 @@
   ]
  },
  {
-  "score": 16.44624999999763,
-  "generations_alive": 24,
-  "ancestor_generations": 153,
+  "score": 16.03279999999772,
+  "generations_alive": 25,
+  "ancestor_generations": 154,
   "weights": [
    -0.7821464537548857,
    0.029563157465176015,
@@ -648,9 +648,9 @@
   ]
  },
  {
-  "score": 13.416250000000716,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 12.604444444445072,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9547909973033555,
    0.029563157465176015,
@@ -660,9 +660,9 @@
   ]
  },
  {
-  "score": 13.416250000000716,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 12.604444444445072,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9547909973033555,
    0.029563157465176015,
@@ -672,9 +672,9 @@
   ]
  },
  {
-  "score": 13.416250000000716,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 12.604444444445072,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9402098991130545,
    0.029563157465176015,
@@ -684,9 +684,9 @@
   ]
  },
  {
-  "score": 13.416250000000716,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 12.604444444445072,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9547909973033555,
    0.029563157465176015,
@@ -696,9 +696,9 @@
   ]
  },
  {
-  "score": 13.416250000000716,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 12.604444444445072,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9402098991130545,
    0.029563157465176015,
@@ -708,9 +708,9 @@
   ]
  },
  {
-  "score": 12.325333333333539,
-  "generations_alive": 15,
-  "ancestor_generations": 153,
+  "score": 11.936875000000189,
+  "generations_alive": 16,
+  "ancestor_generations": 154,
   "weights": [
    0.8707687539463609,
    0.029563157465176015,
@@ -720,9 +720,9 @@
   ]
  },
  {
-  "score": 11.524285714286338,
-  "generations_alive": 7,
-  "ancestor_generations": 153,
+  "score": 10.847500000000535,
+  "generations_alive": 8,
+  "ancestor_generations": 154,
   "weights": [
    0.9402098991130545,
    0.029563157465176015,
@@ -732,9 +732,9 @@
   ]
  },
  {
-  "score": 8.539999999999525,
-  "generations_alive": 7,
-  "ancestor_generations": 153,
+  "score": 8.236249999999574,
+  "generations_alive": 8,
+  "ancestor_generations": 154,
   "weights": [
    0.22749567998205977,
    0.029563157465176015,
@@ -744,9 +744,9 @@
   ]
  },
  {
-  "score": 8.539999999999525,
-  "generations_alive": 7,
-  "ancestor_generations": 153,
+  "score": 8.236249999999574,
+  "generations_alive": 8,
+  "ancestor_generations": 154,
   "weights": [
    0.33656983487360903,
    0.029563157465176015,
@@ -756,9 +756,9 @@
   ]
  },
  {
-  "score": 7.386249999999601,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 7.24444444444408,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.6230185979749241,
    0.029563157465176015,
@@ -768,9 +768,9 @@
   ]
  },
  {
-  "score": 7.249000000000234,
-  "generations_alive": 10,
-  "ancestor_generations": 153,
+  "score": 7.145454545454751,
+  "generations_alive": 11,
+  "ancestor_generations": 154,
   "weights": [
    -0.027658420786168314,
    0.029563157465176015,
@@ -780,9 +780,489 @@
   ]
  },
  {
-  "score": 4.452500000000185,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.28760942772015596
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   -0.42257262255757366,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   -0.2763535990384143
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.927758694810026,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   -0.4240381021148427
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.03511227454475807,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   -0.24168591764925607
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.3080360479614481,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   -0.6822952001436746,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.6230185979749241,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.9692984923154884
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.14096291696931607,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   -0.861483543057189
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.14096291696931607,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.545919047864917
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.7334769023075325,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.6230185979749241,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9547909973033555,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9402098991130545,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   -0.7899428582338817,
+   0.029563157465176015,
+   -0.8487008478104601,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9547909973033555,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9402098991130545,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.8016969485616374
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.22749567998205977,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.6230185979749241,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   -0.7899428582338817,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   -0.29046098759095096,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   -0.07391751459797335,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9547909973033555,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.8930042378750789,
+   0.03933815476888025,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 6.109999999999914,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.02001732118593802,
+   0.7243644578157438
+  ]
+ },
+ {
+  "score": 4.636666666666822,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    -0.7899428582338817,
    0.029563157465176015,
@@ -792,9 +1272,9 @@
   ]
  },
  {
-  "score": 4.452500000000185,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 4.636666666666822,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    -0.7841220431904559,
    0.029563157465176015,
@@ -804,9 +1284,9 @@
   ]
  },
  {
-  "score": 4.452500000000185,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 4.636666666666822,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    -0.7910594672952453,
    0.029563157465176015,
@@ -816,9 +1296,9 @@
   ]
  },
  {
-  "score": 3.800000000000194,
-  "generations_alive": 7,
-  "ancestor_generations": 153,
+  "score": 4.088750000000159,
+  "generations_alive": 8,
+  "ancestor_generations": 154,
   "weights": [
    -0.07391751459797335,
    0.029563157465176015,
@@ -828,9 +1308,9 @@
   ]
  },
  {
-  "score": 3.332500000000171,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 3.6411111111112535,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    -0.3393091816471383,
    0.029563157465176015,
@@ -840,9 +1320,9 @@
   ]
  },
  {
-  "score": 3.332500000000171,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 3.6411111111112535,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9603606544686345,
    0.029563157465176015,
@@ -852,9 +1332,9 @@
   ]
  },
  {
-  "score": 3.332500000000171,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 3.6411111111112535,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9547909973033555,
    0.029563157465176015,
@@ -864,9 +1344,9 @@
   ]
  },
  {
-  "score": 3.332500000000171,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 3.6411111111112535,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9402098991130545,
    0.029563157465176015,
@@ -876,9 +1356,9 @@
   ]
  },
  {
-  "score": 3.332500000000171,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 3.6411111111112535,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.9547909973033555,
    0.029563157465176015,
@@ -888,9 +1368,9 @@
   ]
  },
  {
-  "score": 3.332500000000171,
-  "generations_alive": 8,
-  "ancestor_generations": 153,
+  "score": 3.6411111111112535,
+  "generations_alive": 9,
+  "ancestor_generations": 154,
   "weights": [
    0.8930042378750789,
    0.029563157465176015,
@@ -900,900 +1380,420 @@
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.9200000000000015,
   "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.029563157465176015,
-   -0.9946677393909411,
-   -0.9699856392412243,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.7533128326714502,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.1298015747302228,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   -0.4035999961894563,
-   -0.4142900289380478,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.7478338945159373
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.14096291696931607,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.8294487063126117,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.5164895663162177,
-   -0.9946677393909411,
+   -0.6025791451865534,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.8800000000000014,
   "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.46694552657167865,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.1925551354227526,
-   0.08772403580969224,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.572901709843562
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.3797435638266866,
-   -0.8257362817179326,
-   -0.8283660906272201,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.7173793316955059,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.4422294530827897,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   -0.8825894841022861,
-   0.029563157465176015,
-   0.99262167293135,
-   -0.014323442795151298,
-   -0.2062251039060501
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.4002850933177915,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
    0.21528042182919482,
    0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   -0.0954152814277347
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.9792502356893482,
-   -0.9946677393909411,
+   -0.39496672985935355,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.8800000000000014,
   "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.34129971252469926,
-   0.04424654083102353,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
-   0.029563157465176015,
+   0.06576668352959092,
    -0.9946677393909411,
    0.02001732118593802,
-   0.12451125207377212
+   0.6858373732271552
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.8400000000000014,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.9750033632605541,
+   -0.967843231931012,
    0.029563157465176015,
-   -0.9946677393909411,
+   -0.29608274531785117,
    0.02001732118593802,
-   0.12451125207377212
+   -0.7873149083816775
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.8400000000000014,
   "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.17655463072494526,
-   0.029563157465176015,
-   -0.23364492551262273,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   -0.3705863324281422,
-   0.029563157465176015,
-   -0.9946677393909411,
-   -0.9868054586261001,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   -0.24408186716649882,
-   0.029563157465176015,
-   -0.17870726320212027,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   -0.3574257403678074,
-   -0.9946677393909411,
-   0.02001732118593802,
-   -0.21891538952191225
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.3080360479614481,
-   0.2326456747336918,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.3459001070086929,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.17240613620932277,
-   0.14211329684701846
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.29327250748184475,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.1461459926602906,
-   -0.44109505666573945,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.7965095040978611,
-   -0.8582537479225865
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   -0.7495064266405842,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.029563157465176015,
-   -0.4394827422269074,
-   -0.4551055733894054,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9595768532945346,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   -0.13644972979650283,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   -0.4400947099385386
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.3459001070086929,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.8649941305750042
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.14096291696931607,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.14096291696931607,
-   0.029563157465176015,
-   0.46926019902355565,
-   -0.18231739751611076,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
    0.5077898293871828,
    0.029563157465176015,
-   -0.5952667040689388,
-   0.02001732118593802,
+   -0.9946677393909411,
+   -0.4300130721507933,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.7900000000000014,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.11870589519465047,
+   0.9750033632605541,
    0.029563157465176015,
-   0.0602895325168602,
-   -0.13555183693069472,
+   -0.9946677393909411,
+   -0.8075662964941301,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.7900000000000014,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   -0.45255343554070593,
+   -0.1930861056123585,
+   0.2754591586968793
+  ]
+ },
+ {
+  "score": 1.7900000000000014,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
   "weights": [
    0.9402098991130545,
    0.029563157465176015,
    -0.9946677393909411,
-   0.02001732118593802,
+   -0.8112275084616147,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.7600000000000013,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.6230185979749241,
+   0.9750033632605541,
    0.029563157465176015,
-   -0.8487008478104601,
-   0.15731205491198774,
+   -0.9611568364690928,
+   0.1538575173606498,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.7600000000000013,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.9402098991130545,
+   0.57888652607392,
    0.029563157465176015,
+   -0.9946677393909411,
+   0.195609566846634,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 1.7400000000000013,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.6310699406117228,
+   0.15072632699426647,
    -0.9946677393909411,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.7400000000000013,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.9547909973033555,
-   0.33197718196830195,
+   0.5907805852280603,
+   0.029563157465176015,
+   -0.9946677393909411,
+   0.33428508001577484,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 1.6900000000000013,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9751843341515716,
+   0.9297003387161114,
    -0.9946677393909411,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.6900000000000013,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.32603039852857174,
-   0.029563157465176015,
-   -0.8487008478104601,
+   -0.47275644817533036,
+   0.4218016068835946,
+   -0.37104557221282786,
    0.02001732118593802,
-   0.12451125207377212
+   -0.05002260098647482
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.6900000000000013,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.9547909973033555,
-   -0.8423766628804839,
+   0.3459001070086929,
+   0.4942213827805768,
    -0.9946677393909411,
    0.02001732118593802,
-   -0.01919515719426146
+   -0.1500523612224296
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.6900000000000013,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.9547909973033555,
-   0.36851804063488713,
-   0.504238490940641,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9547909973033555,
-   0.029563157465176015,
+   0.3459001070086929,
+   0.28594380580639767,
    -0.9946677393909411,
    0.02001732118593802,
-   0.12451125207377212
+   0.5376281748208267
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.6900000000000013,
   "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9402098991130545,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   -0.9515899334206912
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9402098991130545,
-   0.029563157465176015,
-   0.20173353845037534,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.8707687539463609,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.22749567998205977,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.33656983487360903,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.6230185979749241,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   -0.027658420786168314,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   -0.7841220431904559,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.8475653891043491,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   -0.6841338191193196,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
    -0.3393091816471383,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.7257571941315624
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.8930206409569943,
-   0.029563157465176015,
-   -0.9946677393909411,
+   0.08398253258818822,
+   -0.23529055370278695,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.6900000000000013,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.9547909973033555,
-   0.20500082261361485,
+   0.9402098991130545,
+   0.6330899342994738,
    -0.9946677393909411,
+   -0.09912491681192126,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 1.5900000000000012,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   0.28966223166566896,
+   0.02001732118593802,
+   0.7749960065708941
+  ]
+ },
+ {
+  "score": 1.5900000000000012,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   0.8421978702318322,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.5900000000000012,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
+  "weights": [
+   0.17036932162859908,
+   0.029563157465176015,
+   0.45927862795184193,
+   0.14195634938654633,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 1.5900000000000012,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9416884752136789,
+   0.029563157465176015,
+   0.09595411749426419,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 1.5900000000000012,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9750033632605541,
+   0.029563157465176015,
+   0.239589923623708,
+   0.02001732118593802,
+   -0.44935842035716433
+  ]
+ },
+ {
+  "score": 1.5900000000000012,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.3459001070086929,
+   0.029563157465176015,
+   0.415852817361565,
+   0.02001732118593802,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 1.5900000000000012,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
   "weights": [
    0.9402098991130545,
    0.029563157465176015,
-   -0.9946677393909411,
+   -0.17454469433834352,
+   0.8155316946400717,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 1.5900000000000012,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.9547909973033555,
+   -0.17159092849515223,
+   0.6439642948256175,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.5900000000000012,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.17577590201814508,
+   0.9750033632605541,
    0.029563157465176015,
-   -0.9946677393909411,
+   0.2237983906217953,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.320000000000001,
   "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.8930042378750789,
-   0.029563157465176015,
-   0.7646055517587351,
-   -0.1961064824577372,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
    0.9751843341515716,
    0.029563157465176015,
    -0.9946677393909411,
-   0.02001732118593802,
+   0.5800501903815902,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.320000000000001,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   -0.23047394882801164,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   -0.5660208725388773
+   0.9750033632605541,
+   0.06446255505030618,
+   -0.6835799392212569,
+   0.9214766428438039,
+   0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.320000000000001,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.9751843341515716,
-   0.029563157465176015,
-   -0.9946677393909411,
+   0.14096291696931607,
+   -0.48725398391928465,
+   0.822082697403083,
    0.02001732118593802,
-   0.7962380069682338
+   -0.9399303091094464
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.320000000000001,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
    0.9750033632605541,
    0.029563157465176015,
    -0.9946677393909411,
+   0.9952832700591485,
+   0.12451125207377212
+  ]
+ },
+ {
+  "score": 1.320000000000001,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.8204962071771633,
+   -0.6521918655361734,
+   -0.9946677393909411,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.320000000000001,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.9751843341515716,
+   -0.7821464537548857,
    0.029563157465176015,
+   -0.8487008478104601,
+   0.7910776816524763,
+   0.06727259330789925
+  ]
+ },
+ {
+  "score": 1.320000000000001,
+  "generations_alive": 1,
+  "ancestor_generations": 154,
+  "weights": [
+   0.8707687539463609,
+   -0.41318449273591895,
    -0.9946677393909411,
    0.02001732118593802,
    0.12451125207377212
   ]
  },
  {
-  "score": 0.0,
+  "score": 1.320000000000001,
   "generations_alive": 1,
-  "ancestor_generations": 153,
+  "ancestor_generations": 154,
   "weights": [
-   0.9751843341515716,
-   0.7834693193941971,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9750033632605541,
-   0.6564094731062635,
-   -0.9946677393909411,
-   0.02001732118593802,
-   0.12451125207377212
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.06527151496314021,
-   0.029563157465176015,
-   -0.9946677393909411,
-   0.02001732118593802,
-   -0.9603579369749691
-  ]
- },
- {
-  "score": 0.0,
-  "generations_alive": 1,
-  "ancestor_generations": 153,
-  "weights": [
-   0.9751843341515716,
-   0.029563157465176015,
+   -0.027658420786168314,
+   -0.46944179196776004,
    -0.9946677393909411,
    0.02001732118593802,
    0.12451125207377212
